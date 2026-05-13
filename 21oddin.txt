@@ -1,0 +1,18 @@
+SET SERVEROUTPUT ON;
+
+CREATE OR REPLACE PROCEDURE OddNumbers
+IS
+BEGIN
+    FOR i IN 1..20 LOOP
+
+        IF MOD(i,2)=0 THEN
+            CONTINUE;
+        END IF;
+
+        DBMS_OUTPUT.PUT_LINE(i);
+
+    END LOOP;
+END;
+/
+
+EXEC OddNumbers;
