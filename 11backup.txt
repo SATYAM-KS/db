@@ -1,0 +1,1 @@
+mysqldump -u root -p collegeDB > college_backup.sql
