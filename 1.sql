@@ -1,0 +1,13 @@
+CREATE DATABASE CollegeDB;
+USE CollegeDB;
+
+CREATE TABLE Student(
+  StudentID NUMBER PRIMARY KEY;
+  Name VARCHAR(50);
+  Age NUMBER);
+
+INSERT INTO Student VALUES(1, 'a', 20);
+INSERT INTO Student VALUES(2, 'b', 19);
+INSERT INTO Student VALUES(3, 'c', 21);
+
+SELECT * FROM Student;
