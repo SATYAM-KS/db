@@ -1,0 +1,20 @@
+SET SERVEROUTPUT ON;
+
+CREATE OR REPLACE FUNCTION SquareNum(
+    n NUMBER
+)
+RETURN NUMBER
+IS
+BEGIN
+    RETURN n*n;
+END;
+/
+
+DECLARE
+    result NUMBER;
+BEGIN
+    result := SquareNum(5);
+
+    DBMS_OUTPUT.PUT_LINE('Square is: ' || result);
+END;
+/
