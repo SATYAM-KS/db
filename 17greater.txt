@@ -1,0 +1,25 @@
+SET SERVEROUTPUT ON;
+
+CREATE OR REPLACE FUNCTION GreaterNum(
+    a NUMBER,
+    b NUMBER
+)
+RETURN NUMBER
+IS
+BEGIN
+    IF a>b THEN
+        RETURN a;
+    ELSE
+        RETURN b;
+    END IF;
+END;
+/
+
+DECLARE
+    result NUMBER;
+BEGIN
+    result := GreaterNum(10,20);
+
+    DBMS_OUTPUT.PUT_LINE('Greater Number is: ' || result);
+END;
+/
